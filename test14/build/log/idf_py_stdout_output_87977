@@ -1,0 +1,21 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /Users/tetsumaariyoshi/esp-idf/programs/test14/build/bootloader/esp-idf/esptool_py && /Users/tetsumaariyoshi/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/tetsumaariyoshi/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/tetsumaariyoshi/esp-idf/programs/test14/build/bootloader/bootloader.bin
+Bootloader binary size 0x65c0 bytes. 0xa40 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/test14.c.obj
+/Users/tetsumaariyoshi/esp-idf/programs/test14/main/test14.c: In function 'is_packet_valid':
+/Users/tetsumaariyoshi/esp-idf/programs/test14/main/test14.c:94:14: warning: unused variable 'frame_subtype' [-Wunused-variable]
+   94 |     unsigned frame_subtype = (hdr->frame_ctrl & 0x00F0) >> 4;
+      |              ^~~~~~~~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable test14.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /Users/tetsumaariyoshi/esp-idf/programs/test14/build/test14.bin
+[9/9] cd /Users/tetsumaariyoshi/esp-idf/programs/test14/build/esp-idf/esptool_py && /Users/tetsumaariyoshi/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/tetsumaariyoshi/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/tetsumaariyoshi/esp-idf/programs/test14/build/partition_table/partition-table.bin /Users/tetsumaariyoshi/esp-idf/programs/test14/build/test14.bin
+test14.bin binary size 0xb0b20 bytes. Smallest app partition is 0x100000 bytes. 0x4f4e0 bytes (31%) free.

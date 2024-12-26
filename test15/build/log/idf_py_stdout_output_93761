@@ -1,0 +1,141 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6300
+ho 0 tail 12 room 4
+load:0x40078000,len:15788
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-dev-4375-gf420609c33 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec 26 2024 11:46:26[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1747ch ( 95356) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=000274a4 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=000274c8 vaddr=3ffb0000 size=03ef0h ( 16112) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002b3c0 vaddr=40080000 size=04c58h ( 19544) load[0m
+[0;32mI (145) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=7d69ch (513692) map[0m
+[0;32mI (321) esp_image: segment 5: paddr=000ad6c4 vaddr=40084c58 size=12bach ( 76716) load[0m
+[0;32mI (362) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (362) boot: Disabling RNG early entropy source...[0m
+[0;32mI (373) cpu_start: Multicore app[0m
+[0;32mI (381) cpu_start: Pro cpu start user code[0m
+[0;32mI (381) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (381) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     test15[0m
+[0;32mI (385) app_init: App version:      v5.4-dev-4375-gf420609c33[0m
+[0;32mI (390) app_init: Compile time:     Dec 26 2024 11:46:20[0m
+[0;32mI (395) app_init: ELF file SHA256:  17bc401ca...[0m
+[0;32mI (400) app_init: ESP-IDF:          v5.4-dev-4375-gf420609c33[0m
+[0;32mI (405) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (409) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (413) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (417) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (423) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (428) heap_init: At 3FFB8120 len 00027EE0 (159 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (439) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 40097804 len 000087FC (33 KiB): IRAM[0m
+[0;32mI (451) spi_flash: detected chip: generic[0m
+[0;32mI (453) spi_flash: flash io: dio[0m
+[0;33mW (456) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (469) main_task: Started on CPU0[0m
+[0;32mI (479) main_task: Calling app_main()[0m
+[0;32mI (499) wifi:wifi driver task: 3ffbfe78, prio:23, stack:6656, core=0[0m
+[0;32mI (499) wifi:wifi firmware version: 59f0bdf2a[0m
+[0;32mI (499) wifi:wifi certification version: v7.0[0m
+[0;32mI (499) wifi:config NVS flash: enabled[0m
+[0;32mI (499) wifi:config nano formatting: disabled[0m
+[0;32mI (509) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (509) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (519) wifi:Init management short buffer num: 32[0m
+[0;32mI (519) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (529) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (529) wifi:Init static rx buffer num: 10[0m
+[0;32mI (529) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (539) wifi_init: rx ba win: 6[0m
+[0;32mI (539) wifi_init: accept mbox: 6[0m
+[0;32mI (539) wifi_init: tcpip mbox: 32[0m
+[0;32mI (549) wifi_init: udp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp tx win: 5760[0m
+[0;32mI (559) wifi_init: tcp rx win: 5760[0m
+[0;32mI (559) wifi_init: tcp mss: 1440[0m
+[0;32mI (559) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (569) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (569) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;32mI (659) wifi:mode : null[0m
+[0;32mI (659) wifi:ic_enable_sniffer[0m
+Wi-Fi Sniffer Initialized with Optimizations.
+[0;32mI (659) main_task: Returned from app_main()[0m
+Destination MAC: ff:ff:ff:ff:0a:ce
+Source MAC: 10:0c:2f:c6:ff:ff
+BSSID: ff:ff:ff:ff:50:09
+Destination MAC: ff:ff:ff:ff:0a:ce
+Source MAC: 10:0c:2f:c6:ff:ff
+BSSID: ff:ff:ff:ff:60:09
+Destination MAC: ff:ff:ff:ff:36:e6
+Source MAC: ad:f3:3c:fe:ff:ff
+BSSID: ff:ff:ff:ff:c0:a5
+Destination MAC: ff:ff:ff:ff:36:e6
+Source MAC: ad:f3:3c:fe:ff:ff
+BSSID: ff:ff:ff:ff:d0:a5
+Destination MAC: ff:ff:ff:ff:36:e6
+Source MAC: ad:f3:3c:fe:ff:ff
+BSSID: ff:ff:ff:ff:f0:a5
+Destination MAC: ff:ff:ff:ff:00:28
+Source MAC: f8:87:7e:68:ff:ff
+BSSID: ff:ff:ff:ff:60:dd
+Destination MAC: ff:ff:ff:ff:00:28
+Source MAC: f8:87:7e:68:ff:ff
+BSSID: ff:ff:ff:ff:70:dd
+Destination MAC: ff:ff:ff:ff:0a:4e
+Source MAC: 4d:1f:81:69:ff:ff
+BSSID: ff:ff:ff:ff:70:01
+Destination MAC: ff:ff:ff:ff:0a:4e
+Source MAC: 4d:1f:81:69:ff:ff
+BSSID: ff:ff:ff:ff:80:01
+Destination MAC: ff:ff:ff:ff:ca:07
+Source MAC: e8:0d:23:93:ff:ff
+BSSID: ff:ff:ff:ff:c0:27
+Destination MAC: ff:ff:ff:ff:ca:07
+Source MAC: e8:0d:23:93:ff:ff
+BSSID: ff:ff:ff:ff:d0:27
+Destination MAC: ff:ff:ff:ff:52:45
+Source MAC: d8:6f:7c:6a:ff:ff
+BSSID: ff:ff:ff:ff:d0:8e
+Destination MAC: ff:ff:ff:ff:52:45
+Source MAC: d8:6f:7c:6a:ff:ff
+BSSID: ff:ff:ff:ff:a0:0c
+Beacon Frame Captured
+Destination MAC: ff:ff:ff:ff:d4:2c
+Source MAC: 46:4a:02:c1:d4:2c
+BSSID: 46:4a:02:c1:d0:6c
+Destination MAC: ff:ff:ff:ff:10:f6
+Source MAC: 0a:51:33:26:ff:ff
+BSSID: ff:ff:ff:ff:d0:4d
+Destination MAC: ff:ff:ff:ff:be:de
+Source MAC: 76:7e:65:1a:ff:ff
+BSSID: ff:ff:ff:ff:00:5d
+Destination MAC: ff:ff:ff:ff:be:de
+Source MAC: 76:7e:65:1a:ff:ff
+BSSID: ff:ff:ff:ff:10:5d
+Beacon Frame Captured
+Destination MAC: ff:ff:ff:ff:d4:2c
+Source MAC: 46:4a:02:c1:d4:2c
+BSSID: 46:4a:02:c1:60:86

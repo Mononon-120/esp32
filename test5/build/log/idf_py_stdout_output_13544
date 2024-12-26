@@ -1,0 +1,244 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6300
+ho 0 tail 12 room 4
+load:0x40078000,len:15788
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-dev-4375-gf420609c33 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec 12 2024 13:00:50[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=174ech ( 95468) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00027514 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00027538 vaddr=3ffb0000 size=03ef0h ( 16112) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002b430 vaddr=40080000 size=04be8h ( 19432) load[0m
+[0;32mI (145) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=7d7b4h (513972) map[0m
+[0;32mI (321) esp_image: segment 5: paddr=000ad7dc vaddr=40084be8 size=12c1ch ( 76828) load[0m
+[0;32mI (362) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (362) boot: Disabling RNG early entropy source...[0m
+[0;32mI (373) cpu_start: Multicore app[0m
+[0;32mI (381) cpu_start: Pro cpu start user code[0m
+[0;32mI (381) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (381) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     test5[0m
+[0;32mI (385) app_init: App version:      v5.4-dev-4375-gf420609c33[0m
+[0;32mI (390) app_init: Compile time:     Dec 12 2024 13:00:45[0m
+[0;32mI (395) app_init: ELF file SHA256:  28595e3fc...[0m
+[0;32mI (400) app_init: ESP-IDF:          v5.4-dev-4375-gf420609c33[0m
+[0;32mI (405) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (409) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (413) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (417) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (423) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (428) heap_init: At 3FFB8DA0 len 00027260 (156 KiB): DRAM[0m
+[0;32mI (434) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (439) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 40097804 len 000087FC (33 KiB): IRAM[0m
+[0;32mI (451) spi_flash: detected chip: generic[0m
+[0;32mI (453) spi_flash: flash io: dio[0m
+[0;33mW (456) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (469) main_task: Started on CPU0[0m
+[0;32mI (479) main_task: Calling app_main()[0m
+[0;32mI (499) wifi:wifi driver task: 3ffc0af8, prio:23, stack:6656, core=0[0m
+[0;32mI (499) wifi:wifi firmware version: 59f0bdf2a[0m
+[0;32mI (499) wifi:wifi certification version: v7.0[0m
+[0;32mI (499) wifi:config NVS flash: enabled[0m
+[0;32mI (499) wifi:config nano formatting: disabled[0m
+[0;32mI (509) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (509) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (519) wifi:Init management short buffer num: 32[0m
+[0;32mI (519) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (519) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (529) wifi:Init static rx buffer num: 10[0m
+[0;32mI (529) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (539) wifi_init: rx ba win: 6[0m
+[0;32mI (539) wifi_init: accept mbox: 6[0m
+[0;32mI (539) wifi_init: tcpip mbox: 32[0m
+[0;32mI (539) wifi_init: udp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp tx win: 5760[0m
+[0;32mI (549) wifi_init: tcp rx win: 5760[0m
+[0;32mI (559) wifi_init: tcp mss: 1440[0m
+[0;32mI (559) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (559) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (569) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (659) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (679) wifi:mode : sta (08:a6:f7:b1:0d:a0)[0m
+[0;32mI (679) wifi:enable tsf[0m
+[0;32mI (679) wifi:ic_enable_sniffer[0m
+
+Recorded IP Addresses:
+[0;32mI (679) main_task: Returned from app_main()[0m
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:2a:ce
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:2a:ce
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:16:f0
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:fe:22
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:fe:22
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:96:03
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:96:03
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:a2:0c
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:a2:0c
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:fe:2e
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:fe:2e
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:22:4f
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:9a:80
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:9a:80
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:3e:3f
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:3e:3f
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:46:c6
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:46:c6
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:12:a9
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:12:a9
+
+Packet Length: 154
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:42:e4
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:1a:19
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:4a:22
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:4a:22
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:46:4d
+
+Packet Length: 117
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:3a:1f
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:ae:24
+
+Packet Length: 87
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:02:c3
+
+Packet Length: 123
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:86:ce
+
+Packet Length: 87
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:02:c3
+
+Packet Length: 87
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:02:c3
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:da:dc
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:da:dc
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:c6:76
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:c6:76
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:ae:62
+
+Packet Length: 120
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:ae:62
+
+Packet Length: 157
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:5a:01
+
+Packet Length: 82
+Destination MAC: 40:00:00:00:ff:ff
+Source MAC: ff:ff:ff:ff:f4:ce
+

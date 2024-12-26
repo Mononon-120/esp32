@@ -1,0 +1,793 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6300
+ho 0 tail 12 room 4
+load:0x40078000,len:15788
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (33) boot: ESP-IDF v5.4-dev-4375-gf420609c33 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Dec  9 2024 15:24:42[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (46) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (63) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (76) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (86) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1761ch ( 95772) map[0m
+[0;32mI (126) esp_image: segment 1: paddr=00027644 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (126) esp_image: segment 2: paddr=00027668 vaddr=3ffb0000 size=03ef0h ( 16112) load[0m
+[0;32mI (136) esp_image: segment 3: paddr=0002b560 vaddr=40080000 size=04ab8h ( 19128) load[0m
+[0;32mI (145) esp_image: segment 4: paddr=00030020 vaddr=400d0020 size=7d654h (513620) map[0m
+[0;32mI (321) esp_image: segment 5: paddr=000ad67c vaddr=40084ab8 size=12d4ch ( 77132) load[0m
+[0;32mI (362) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (362) boot: Disabling RNG early entropy source...[0m
+[0;32mI (373) cpu_start: Multicore app[0m
+[0;32mI (381) cpu_start: Pro cpu start user code[0m
+[0;32mI (381) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (381) app_init: Application information:[0m
+[0;32mI (381) app_init: Project name:     test[0m
+[0;32mI (385) app_init: App version:      v5.4-dev-4375-gf420609c33[0m
+[0;32mI (390) app_init: Compile time:     Dec  9 2024 15:24:35[0m
+[0;32mI (395) app_init: ELF file SHA256:  442ffb12a...[0m
+[0;32mI (400) app_init: ESP-IDF:          v5.4-dev-4375-gf420609c33[0m
+[0;32mI (405) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (409) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (413) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (417) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (423) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (428) heap_init: At 3FFB8120 len 00027EE0 (159 KiB): DRAM[0m
+[0;32mI (433) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (439) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (444) heap_init: At 40097804 len 000087FC (33 KiB): IRAM[0m
+[0;32mI (451) spi_flash: detected chip: generic[0m
+[0;32mI (453) spi_flash: flash io: dio[0m
+[0;33mW (456) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (469) main_task: Started on CPU0[0m
+[0;32mI (479) main_task: Calling app_main()[0m
+[0;32mI (499) wifi:wifi driver task: 3ffbfdf4, prio:23, stack:6656, core=0[0m
+[0;32mI (499) wifi:wifi firmware version: 59f0bdf2a[0m
+[0;32mI (499) wifi:wifi certification version: v7.0[0m
+[0;32mI (499) wifi:config NVS flash: enabled[0m
+[0;32mI (499) wifi:config nano formatting: disabled[0m
+[0;32mI (509) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (509) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (519) wifi:Init management short buffer num: 32[0m
+[0;32mI (519) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (519) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (529) wifi:Init static rx buffer num: 10[0m
+[0;32mI (529) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (539) wifi_init: rx ba win: 6[0m
+[0;32mI (539) wifi_init: accept mbox: 6[0m
+[0;32mI (539) wifi_init: tcpip mbox: 32[0m
+[0;32mI (539) wifi_init: udp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp mbox: 6[0m
+[0;32mI (549) wifi_init: tcp tx win: 5760[0m
+[0;32mI (549) wifi_init: tcp rx win: 5760[0m
+[0;32mI (559) wifi_init: tcp mss: 1440[0m
+[0;32mI (559) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (559) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (569) phy_init: phy_version 4840,02e0d70,Sep  2 2024,19:39:07[0m
+[0;33mW (649) phy_init: saving new calibration data because of checksum failure, mode(0)[0m
+[0;32mI (679) wifi:mode : null[0m
+[0;32mI (679) wifi:ic_enable_sniffer[0m
+[0;32mI (679) Wi-Fi Sniffer: Wi-Fi Sniffer started![0m
+[0;32mI (1159) Wi-Fi Sniffer: Packet received: length=368[0m
+[0;32mI (1159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (1159) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (1159) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (2029) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (2029) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (2029) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (2029) Wi-Fi Sniffer: Destination MAC: 33:33:ff:22:0a:fc[0m
+[0;32mI (2159) Wi-Fi Sniffer: Packet received: length=368[0m
+[0;32mI (2159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (2159) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (2159) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (3789) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (3789) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (3789) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (3789) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (4299) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (4299) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (4299) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (4299) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (4499) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (4499) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (4499) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (4509) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (4609) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (4609) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (4609) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (4609) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (4809) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (4809) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (4809) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (4809) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (4909) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (4909) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (4909) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (4919) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (6859) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (6859) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (6859) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (6859) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (7229) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (7229) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (7229) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (7239) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (7239) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (7239) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (7249) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (7249) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (7369) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (7369) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (7369) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (7369) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (7449) Wi-Fi Sniffer: Packet received: length=90[0m
+[0;32mI (7449) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (7449) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (7449) Wi-Fi Sniffer: Destination MAC: 01:80:c2:00:00:00[0m
+[0;32mI (7659) Wi-Fi Sniffer: Packet received: length=161[0m
+[0;32mI (7659) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (7659) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (7659) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (8189) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (8189) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (8189) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (8189) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (8569) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (8569) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (8569) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (8569) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (8979) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (8979) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (8979) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (8979) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9009) Wi-Fi Sniffer: Packet received: length=260[0m
+[0;32mI (9009) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9009) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (9009) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9079) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (9079) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9079) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (9079) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9159) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (9159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9159) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (9159) Wi-Fi Sniffer: Destination MAC: 33:33:ff:58:2a:48[0m
+[0;32mI (9169) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (9169) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9169) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (9179) Wi-Fi Sniffer: Destination MAC: 33:33:ff:58:2a:48[0m
+[0;32mI (9209) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (9209) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9209) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (9219) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9319) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (9319) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9319) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (9319) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9389) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (9389) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9389) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (9389) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9619) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (9619) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9619) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (9629) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9829) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (9829) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9829) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (9829) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9839) Wi-Fi Sniffer: Packet received: length=120[0m
+[0;32mI (9839) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9839) Wi-Fi Sniffer: Source MAC: a6:a5:ad:2b:98:c9[0m
+[0;32mI (9849) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9859) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (9859) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9859) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (9869) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9869) Wi-Fi Sniffer: Packet received: length=120[0m
+[0;32mI (9879) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9879) Wi-Fi Sniffer: Source MAC: a6:a5:ad:2b:98:c9[0m
+[0;32mI (9879) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (9929) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (9929) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (9929) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (9929) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (10209) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (10209) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (10209) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (10209) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (10239) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (10239) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (10239) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (10239) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (10549) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (10549) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (10549) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (10549) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (10649) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (10649) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (10649) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (10649) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (11249) Wi-Fi Sniffer: Packet received: length=592[0m
+[0;32mI (11249) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (11249) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (11249) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (11359) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (11359) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (11359) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (11359) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (11469) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (11469) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (11469) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (11469) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (12899) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (12899) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (12899) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (12899) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13049) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (13049) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13049) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (13049) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13109) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (13109) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13109) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (13109) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13279) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (13279) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13279) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (13279) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13389) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (13389) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13389) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (13389) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13669) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (13669) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13669) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (13669) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (13819) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (13819) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (13819) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (13819) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (14309) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (14309) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (14309) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (14309) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (14819) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (14819) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (14819) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (14819) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (14949) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (14949) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (14949) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (14949) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15229) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (15229) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15229) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (15229) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15359) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (15359) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15359) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (15359) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15409) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (15409) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15409) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (15409) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15559) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (15559) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15559) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (15569) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15669) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (15669) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15669) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (15669) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15739) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (15739) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15739) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (15739) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (15869) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (15869) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (15869) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (15869) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (16689) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (16689) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (16689) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (16689) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (17069) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (17069) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (17069) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (17069) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (17169) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (17169) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (17169) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (17169) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (17439) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (17439) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (17439) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (17439) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (17579) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (17579) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (17579) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (17579) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (18089) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (18089) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (18089) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (18099) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (18379) Wi-Fi Sniffer: Packet received: length=255[0m
+[0;32mI (18379) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (18379) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (18379) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (18839) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (18839) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (18839) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (18839) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (18949) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (18949) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (18949) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (18959) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (19129) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (19129) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (19129) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (19129) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (19729) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (19729) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (19729) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (19729) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (19839) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (19839) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (19839) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (19839) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (20069) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (20069) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (20069) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (20069) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (20399) Wi-Fi Sniffer: Packet received: length=255[0m
+[0;32mI (20399) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (20399) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (20399) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (20799) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (20799) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (20799) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (20799) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (21469) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (21469) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (21469) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (21479) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (21499) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (21499) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (21499) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (21509) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (21679) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (21679) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (21679) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (21679) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (21689) Wi-Fi Sniffer: Packet received: length=164[0m
+[0;32mI (21689) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (21699) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (21699) Wi-Fi Sniffer: Destination MAC: 01:00:5e:00:00:fb[0m
+[0;32mI (21739) Wi-Fi Sniffer: Packet received: length=231[0m
+[0;32mI (21739) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (21739) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (21739) Wi-Fi Sniffer: Destination MAC: 01:00:5e:00:00:fb[0m
+[0;32mI (22159) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (22159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (22159) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (22159) Wi-Fi Sniffer: Destination MAC: 33:33:ff:57:7e:90[0m
+[0;32mI (22829) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (22829) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (22829) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (22839) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23039) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (23039) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23039) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (23039) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23109) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (23109) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23109) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (23119) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23169) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (23179) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23179) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (23179) Wi-Fi Sniffer: Destination MAC: 33:33:ff:22:0a:fc[0m
+[0;32mI (23219) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (23219) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23219) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (23219) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23419) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (23419) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23419) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (23419) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23449) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (23449) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23449) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (23449) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (23759) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (23759) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (23759) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (23759) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (24169) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (24169) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24169) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (24179) Wi-Fi Sniffer: Destination MAC: 33:33:ff:2c:9b:81[0m
+[0;32mI (24179) Wi-Fi Sniffer: Packet received: length=124[0m
+[0;32mI (24189) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24189) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (24189) Wi-Fi Sniffer: Destination MAC: 33:33:ff:58:2a:48[0m
+[0;32mI (24649) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (24649) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24649) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (24649) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (24669) Wi-Fi Sniffer: Packet received: length=157[0m
+[0;32mI (24669) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24669) Wi-Fi Sniffer: Source MAC: 5a:bd:62:59:59:f4[0m
+[0;32mI (24679) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (24679) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (24689) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24689) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (24689) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (24699) Wi-Fi Sniffer: Packet received: length=157[0m
+[0;32mI (24699) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24709) Wi-Fi Sniffer: Source MAC: 5a:bd:62:59:59:f4[0m
+[0;32mI (24709) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (24809) Wi-Fi Sniffer: Packet received: length=157[0m
+[0;32mI (24809) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (24809) Wi-Fi Sniffer: Source MAC: 5a:bd:62:59:59:f4[0m
+[0;32mI (24809) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (25359) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (25359) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (25359) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (25369) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (25599) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (25599) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (25599) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (25599) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (26619) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (26619) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (26619) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (26629) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (26699) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (26699) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (26699) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (26699) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (26959) Wi-Fi Sniffer: Packet received: length=74[0m
+[0;32mI (26959) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (26959) Wi-Fi Sniffer: Source MAC: 74:70:fd:f6:94:06[0m
+[0;32mI (26959) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (27019) Wi-Fi Sniffer: Packet received: length=168[0m
+[0;32mI (27019) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (27019) Wi-Fi Sniffer: Source MAC: e2:41:0d:f8:fd:df[0m
+[0;32mI (27019) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (27029) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (27029) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (27029) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (27039) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (27239) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (27239) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (27239) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (27239) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (28359) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (28359) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (28359) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (28369) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (28579) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (28579) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (28579) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (28579) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (28749) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (28749) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (28749) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (28749) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29429) Wi-Fi Sniffer: Packet received: length=246[0m
+[0;32mI (29429) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29429) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (29429) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29439) Wi-Fi Sniffer: Packet received: length=246[0m
+[0;32mI (29439) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29439) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (29449) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29489) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (29489) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29489) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (29489) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29599) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (29599) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29599) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (29599) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29659) Wi-Fi Sniffer: Packet received: length=161[0m
+[0;32mI (29659) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29659) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (29659) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (29769) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (29769) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (29769) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (29769) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (30069) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (30079) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (30079) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (30079) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (30479) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (30479) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (30479) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (30489) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (30689) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (30689) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (30689) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (30689) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (30999) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (30999) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (30999) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (30999) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (31509) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (31509) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (31509) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (31509) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (31629) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (31629) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (31629) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (31629) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (32329) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (32329) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (32329) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (32329) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (32949) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (32949) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (32949) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (32949) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (33319) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (33319) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (33319) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (33319) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (33459) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (33459) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (33459) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (33459) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (33759) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (33759) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (33759) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (33759) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (33859) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (33859) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (33859) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (33869) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (34389) Wi-Fi Sniffer: Packet received: length=90[0m
+[0;32mI (34389) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (34389) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (34389) Wi-Fi Sniffer: Destination MAC: 01:80:c2:00:00:00[0m
+[0;32mI (34579) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (34579) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (34579) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (34589) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (35099) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (35099) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (35099) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (35099) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (35299) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (35299) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (35299) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (35299) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (35659) Wi-Fi Sniffer: Packet received: length=161[0m
+[0;32mI (35659) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (35659) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (35659) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (36629) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (36629) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (36629) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (36629) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (36859) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (36859) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (36859) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (36869) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (37589) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (37589) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (37589) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (37589) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (37659) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (37659) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (37659) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (37659) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (38189) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (38199) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (38199) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (38199) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (39589) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (39589) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (39599) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (39599) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (39909) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (39909) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (39909) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (39909) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (39989) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (39989) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (39989) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (39989) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (40249) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (40249) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (40249) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (40249) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (40859) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (40859) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (40859) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (40859) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (40959) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (40959) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (40959) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (40959) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (41429) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (41429) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (41429) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (41429) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (42119) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (42119) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (42119) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (42119) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (42159) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (42159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (42159) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (42159) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (43419) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (43419) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (43419) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (43419) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (43449) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (43449) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (43449) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (43459) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (43589) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (43589) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (43589) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (43589) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (43999) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (43999) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44009) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (44009) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (44129) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (44129) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44129) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (44139) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (44409) Wi-Fi Sniffer: Packet received: length=120[0m
+[0;32mI (44409) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44409) Wi-Fi Sniffer: Source MAC: 96:86:92:d7:38:60[0m
+[0;32mI (44409) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (44419) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44419) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44419) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44429) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44429) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44439) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44439) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44449) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44449) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44459) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44459) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44469) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44469) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44479) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44479) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44479) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44489) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44489) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44499) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44499) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44509) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44509) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44519) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44519) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44529) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44529) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44529) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44539) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44539) Wi-Fi Sniffer: Packet received: length=28[0m
+[0;32mI (44549) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44549) Wi-Fi Sniffer: Source MAC: fe:2d:65:9d:68:71[0m
+[0;32mI (44559) Wi-Fi Sniffer: Destination MAC: f8:b7:97:59:81:8e[0m
+[0;32mI (44559) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (44569) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44569) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (44579) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (44919) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (44919) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (44919) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (44929) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45339) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (45339) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45339) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (45339) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45569) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (45569) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45569) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (45569) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45669) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (45669) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45669) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (45669) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45669) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (45679) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45679) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (45689) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45769) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (45769) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45769) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (45769) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (45819) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (45819) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (45819) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (45829) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46049) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (46049) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46049) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (46049) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46339) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (46339) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46339) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (46339) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46389) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (46389) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46389) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (46389) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46459) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (46459) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46459) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (46459) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46769) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (46769) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46769) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (46769) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (46789) Wi-Fi Sniffer: Packet received: length=35[0m
+[0;32mI (46789) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46789) Wi-Fi Sniffer: Source MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46789) Wi-Fi Sniffer: Destination MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46799) Wi-Fi Sniffer: Packet received: length=35[0m
+[0;32mI (46799) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46809) Wi-Fi Sniffer: Source MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46809) Wi-Fi Sniffer: Destination MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46819) Wi-Fi Sniffer: Packet received: length=35[0m
+[0;32mI (46819) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46829) Wi-Fi Sniffer: Source MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46829) Wi-Fi Sniffer: Destination MAC: 84:f1:47:a9:6f:00[0m
+[0;32mI (46899) Wi-Fi Sniffer: Packet received: length=376[0m
+[0;32mI (46899) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (46899) Wi-Fi Sniffer: Source MAC: 60:84:bd:64:68:e9[0m
+[0;32mI (46899) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (47159) Wi-Fi Sniffer: Packet received: length=355[0m
+[0;32mI (47159) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47159) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (47159) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (47169) Wi-Fi Sniffer: Packet received: length=364[0m
+[0;32mI (47169) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47179) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (47179) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (47189) Wi-Fi Sniffer: Packet received: length=364[0m
+[0;32mI (47189) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47189) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (47199) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (47199) Wi-Fi Sniffer: Packet received: length=429[0m
+[0;32mI (47209) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47209) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (47219) Wi-Fi Sniffer: Destination MAC: 01:00:5e:7f:ff:fa[0m
+[0;32mI (47689) Wi-Fi Sniffer: Packet received: length=370[0m
+[0;32mI (47689) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47689) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:00[0m
+[0;32mI (47689) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (47699) Wi-Fi Sniffer: Packet received: length=336[0m
+[0;32mI (47699) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47699) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (47709) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m
+[0;32mI (47839) Wi-Fi Sniffer: Packet received: length=98[0m
+[0;32mI (47839) Wi-Fi Sniffer: frame detected[0m
+[0;32mI (47839) Wi-Fi Sniffer: Source MAC: 04:d9:f5:e2:53:02[0m
+[0;32mI (47839) Wi-Fi Sniffer: Destination MAC: ff:ff:ff:ff:ff:ff[0m

@@ -1,0 +1,69 @@
+[1/5] cd /Users/tetsumaariyoshi/esp-idf/programs/test14/build/esp-idf/esptool_py && /Users/tetsumaariyoshi/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/tetsumaariyoshi/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/tetsumaariyoshi/esp-idf/programs/test14/build/partition_table/partition-table.bin /Users/tetsumaariyoshi/esp-idf/programs/test14/build/test14.bin
+test14.bin binary size 0xb0b20 bytes. Smallest app partition is 0x100000 bytes. 0x4f4e0 bytes (31%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/tetsumaariyoshi/esp-idf/programs/test14/build/bootloader/esp-idf/esptool_py && /Users/tetsumaariyoshi/.espressif/python_env/idf5.5_py3.13_env/bin/python /Users/tetsumaariyoshi/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /Users/tetsumaariyoshi/esp-idf/programs/test14/build/bootloader/bootloader.bin
+Bootloader binary size 0x65c0 bytes. 0xa40 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/tetsumaariyoshi/esp-idf/components/esptool_py && /opt/homebrew/Cellar/cmake/3.30.5/bin/cmake -D IDF_PATH=/Users/tetsumaariyoshi/esp-idf -D "SERIAL_TOOL=/Users/tetsumaariyoshi/.espressif/python_env/idf5.5_py3.13_env/bin/python;;/Users/tetsumaariyoshi/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/tetsumaariyoshi/esp-idf/programs/test14/build -P /Users/tetsumaariyoshi/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/tty.SLAB_USBtoUART -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 test14.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/tty.SLAB_USBtoUART
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 08:a6:f7:b1:0d:a0
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000c0fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26048 bytes to 16448...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000756c... (100 %)
+Wrote 26048 bytes (16448 compressed) at 0x00001000 in 0.7 seconds (effective 304.2 kbit/s)...
+Hash of data verified.
+Compressed 723744 bytes to 458623...
+Writing at 0x00010000... (3 %)
+Writing at 0x0001c008... (7 %)
+Writing at 0x00024b0a... (10 %)
+Writing at 0x0002e5b4... (14 %)
+Writing at 0x00033efb... (17 %)
+Writing at 0x00039e1c... (21 %)
+Writing at 0x0003fbeb... (25 %)
+Writing at 0x00045ae1... (28 %)
+Writing at 0x0004beb6... (32 %)
+Writing at 0x000516dd... (35 %)
+Writing at 0x00056aeb... (39 %)
+Writing at 0x0005be33... (42 %)
+Writing at 0x00061075... (46 %)
+Writing at 0x00066380... (50 %)
+Writing at 0x0006bc9d... (53 %)
+Writing at 0x00071b47... (57 %)
+Writing at 0x00077191... (60 %)
+Writing at 0x0007ce59... (64 %)
+Writing at 0x00082c2a... (67 %)
+Writing at 0x00088462... (71 %)
+Writing at 0x0008e18b... (75 %)
+Writing at 0x00093b86... (78 %)
+Writing at 0x0009953a... (82 %)
+Writing at 0x000a2ed1... (85 %)
+Writing at 0x000a9d62... (89 %)
+Writing at 0x000afabf... (92 %)
+Writing at 0x000b58ee... (96 %)
+Writing at 0x000bb2d2... (100 %)
+Wrote 723744 bytes (458623 compressed) at 0x00010000 in 11.7 seconds (effective 493.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 372.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
